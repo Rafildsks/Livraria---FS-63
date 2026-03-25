@@ -20,27 +20,35 @@
 }
 
  .conteudo {
+    flex: 1; /* ESSENCIAL */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
  }
 
- body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding-top: 100px;
- }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px; /* altura do header */
+}
 
 .card {
-    max-width: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    background: white;
-    padding: 16px;
-    margin-top: 20px;
-    max-width: 100%
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+  padding: 16px;
+}
+
+.card img {
+  width: 70%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .card h2 {

@@ -99,7 +99,17 @@
             <p>Autor: J.R.R. Tolkien</p>
             <p>Preço: R$ 27,78</p>
             <button onclick="abrirModal('hobbit')">Mais informações</button>
-            <script>
+        </div>
+    </main>
+<footer class="rodape">
+  <p>© 2026 - Projeto de Livros FullStack FS/63</p>
+  <p>Contato: rafaelfelipes111@gmail.com</p>
+  <p><a href="https://github.com/Rafildsks" target="_blank">Meu GitHub</a></p>
+  <p class="aviso">
+    As imagens utilizadas neste site foram obtidas do site da Amazon e são usadas apenas para fins educacionais.
+  </p>
+</footer>
+<script>
 function abrirModal(livro) {
   const titulo = document.getElementById("titulo");
   const descricao = document.getElementById("descricao");
@@ -123,7 +133,7 @@ function abrirModal(livro) {
     link.href = "https://amazon.com";
   }
 
-  if (livro === "ojantarsecreto") {
+  if (livro === "jantarsecreto") {
     titulo.innerText = "O Jantar Secreto";
     descricao.innerText = "Um romance de intrigas e segredos...";
     link.href = "https://amazon.com";
@@ -183,18 +193,7 @@ function abrirModal(livro) {
 function fecharModal() {
   document.getElementById("modal").style.display = "none";
 }
-</script>
-        </div>        
-
-    </main>
-    <footer class="rodape">
-  <p>© 2026 - Projeto de Livros FullStack FS/63</p>
-  <p>Contato: rafaelfelipes111@gmail.com</p>
-  <p><a href="https://github.com/Rafildsks" target="_blank">Meu GitHub</a></p>
-  <p class="aviso">
-    As imagens utilizadas neste site foram obtidas do site da Amazon e são usadas apenas para fins educacionais.
-  </p>
-</footer>
+</script>        
 
 <div id="modal" class="modal">
   <div class="modal-content">
@@ -210,6 +209,5 @@ function fecharModal() {
 </div>
 
 </body>
-</html>
         
 </html>
