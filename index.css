@@ -108,3 +108,15 @@ button {
   cursor: pointer;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .conteudo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+}
