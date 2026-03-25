@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="cabeçalho">
+    <header class="cabecalho">
         <button>Livros</button>
         <button>Novidades</button>
         <button>Mais Vendidos</button>
@@ -65,11 +65,11 @@
             <button onclick="abrirModal('alienista')">Mais informações</button>
         </div>
         <div class="card">
-            <img src="https://m.media-amazon.com/images/I/71Xw-t2GVxL._SY342_.jpg" alt="Livro 8">
-            <h2>A Arte da Guerra - Sun Tzu</h2>
-            <p>Autor: Sun Tzu</p>
-            <p>Preço: R$ 16,74</p>
-            <button onclick="abrirModal('artedaguerra')">Mais informações</button>
+            <img src="https://m.media-amazon.com/images/I/81LTEfXYgcL._SY425_.jpg" alt="Livro 8">
+            <h2>A hipótese do amor</h2>
+            <p>Autor: Ali Hazelwood</p>
+            <p>Preço: R$ 48,70</p>
+            <button onclick="abrirModal('hipotesedoamor')">Mais informações</button>
         </div>
         <div class="card">
             <img src="https://m.media-amazon.com/images/I/81qjGN2mqPL._SY425_.jpg" alt="Livro 9">
@@ -94,10 +94,10 @@
         </div>
 
         <div class="card">
-            <img src="https://m.media-amazon.com/images/I/91wfHwESyfL._SY425_.jpg" alt="Livro 12">
+            <img src="https://m.media-amazon.com/images/I/91M9xPIf10L._SY425_.jpg" alt="Livro 12">
             <h2>O Hobbit</h2>
             <p>Autor: J.R.R. Tolkien</p>
-            <p>Preço: R$ 27,78</p>
+            <p>Preço: R$ 46,89</p>
             <button onclick="abrirModal('hobbit')">Mais informações</button>
         </div>
     </main>
@@ -106,92 +106,92 @@
   <p>Contato: rafaelfelipes111@gmail.com</p>
   <p><a href="https://github.com/Rafildsks" target="_blank">Meu GitHub</a></p>
   <p class="aviso">
-    As imagens utilizadas neste site foram obtidas do site da Amazon e são usadas apenas para fins educacionais.
+    As imagens utilizadas neste card foram obtidas do site da Amazon e são usadas apenas para fins educacionais.
   </p>
 </footer>
 <script>
+const livros = {
+  anel: {
+    titulo: "O Senhor dos Anéis",
+    descricao: "Um Anel para a todos governar...",
+    link: "https://www.amazon.com.br/Senhor-dos-An%C3%A9is-Sociedade-Anel/dp/8595084750/ref=sr_1_8?crid=WEBCID9C7180&dib=eyJ2IjoiMSJ9.N7TYWPa6MbkMK5nXBtdK0VSRA0VRr4Zc9HITtutanL_mtk_8kdv0RtCP7ShrgKy9t3blmbuwhiP1aqVcd1y1jxL4htwXNnmMMwtPCyN_308rhBKy8EDAB55uSmC2Kfs2RrMkIRuO7eU-XpwVMA7OkHfhXzUmqgk03GbANfvgkYH-LS-Fl-goUvZ9JYUrsHHTuCWev7QkvwpByTvANNg-5K6xUcFmuAGN-bOOlcuhGhPj6MI8tgKP9yv5PTVnzEDEHdXnzhHp6cPUZQwcVuRMtVvtyyYhYD7Rg_sbLqEkK98.W9jP7-wEJLa7Zl_mXuHtAfFHP0Js92Gci3Zg5t15OgE&dib_tag=se&keywords=senhor+dos+aneis&qid=1774466265&sprefix=senhor%2Caps%2C277&sr=8-8"
+  },
+  harry: {
+    titulo: "Harry Potter",
+    descricao: "Um jovem descobre que é um bruxo...",
+    link: "https://www.amazon.com.br/Harry-Potter-Pedra-Filosofal-Rowling/dp/8532530788/ref=pd_sim_d_sccl_3_6/136-1151429-3793618?pd_rd_w=e1Oag&content-id=amzn1.sym.3db004cb-278d-46b6-9838-e834c8193f79&pf_rd_p=3db004cb-278d-46b6-9838-e834c8193f79&pf_rd_r=RQDXAN5KMCDRZBPC0JN1&pd_rd_wg=CP6Gb&pd_rd_r=fbb62da5-eefa-48e9-a2e6-4b95c4814223&pd_rd_i=8532530788&psc=1"
+  },
+  gameofthrones: {
+    titulo: "Game of Thrones",
+    descricao: "Quem vai ficar com o trono?",
+    link: "https://www.amazon.com.br/Guerra-dos-Tronos-Cr%C3%B4nicas-Gelo/dp/8556510787/ref=sr_1_1?crid=3BRZS11DNFMGF&dib=eyJ2IjoiMSJ9.uqs1nHIpTjTu0TddyXAkOUPWodHWyIBRi-3t1A4gajO0aR30Xs-APN-C7Ga8QpNIwGzaJhL4FNT330clGRifQ-r59N3oIjbR4Gl67H6Zez9Mpf7F6JkwumIb-y9gi46Ais70CU-xTusLXdEesroFPr-CzmpKsh7fkpaIghXLcYWWi0o45-yq5E7WgSZH7EOTLOqij_D70MiuCpgmt5anW2psQUJJ9PeRSNnGF38LEMA.UQzUbkkuoxi5u1EZFJkGDwQOUupMBCXRWkUE85jCP7k&dib_tag=se&keywords=game+of+thrones+livros&qid=1774465351&s=books&sprefix=game+o%2Cstripbooks%2C289&sr=1-1"
+  },
+  jantarsecreto: {
+    titulo: "O Jantar Secreto",
+    descricao: "Será so mais um jantar...",
+    link: "https://www.amazon.com.br/Jantar-secreto-Raphael-Montes/dp/8535928359/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=4IXLO9TDPU01&dib=eyJ2IjoiMSJ9.xGbFm4FFmyZW2qvke5raI-r6joluc5C2WyCe4oXhXHUVtHGlyLh-ZH-h7ouBZD1V_sv3SSB0SjILGXW-GEp31MwZe-oYmlXZBX7TDNIdXA4Y_pjm4SI5FXfsyqRXDzBrrw3NJ4aw0sP-1KtJ1mQs5ybC-DkW2Ue7JwSWG-f8wSesz-T-2YE2Y3wGnVOaKtmgiXAqwVGImCeOogVXESiD33iywIGjjyeAYVSdEtuXi1c.NCzOVrEq1X9f6i1slL2uOZ44SO3rdlAsZoNrnZPo7dU&dib_tag=se&keywords=o+jantar&qid=1774465405&s=books&sprefix=o+jantar+%2Cstripbooks%2C259&sr=1-1"
+  },
+  duna: {
+    titulo: "Duna",
+    descricao: "Uma estonteante mistura de aventura e misticismo...",
+    link: "https://www.amazon.com.br/Duna-Frank-Herbert/dp/857657313X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1DAI57QCQU3L3&dib=eyJ2IjoiMSJ9.KktxiTShNNUNSVgX2-feN6DvmzfWPmu6Rtmeg0c8YgDhL37E049sNsfrPWH_tHuHXNPsLG7XuDXAPVT1sq7vRR6O4Zj1UKP1Os6VV3rw-FAEP5u-BX3oEL-kVlfXbhhPxyMEoaMqCbtrqaR9ir1ZoUUVmzJegSbbaWP3J9lc7oW_A4Ri0eGdO3BWhAmkBLzb4mZqC3BnpiNhoGO-CtVcUEpm3sizpUjKGjSf_ODz5yU.qvP5-n_16VC6oCldcYinVK2R2exL0FVeP4tRKknUibs&dib_tag=se&keywords=duna&qid=1774465456&s=books&sprefix=duna%2Cstripbooks%2C262&sr=1-1"
+  },
+  percyjackson: {
+    titulo: "Percy Jackson e o Ladrão de Raio",
+    descricao: "O garoto-problema Percy Jackson é um deles...",
+    link: "https://www.amazon.com.br/ladr%C3%A3o-raios-Rick-Riordan/dp/8580575397"
+  },
+  alienista: {
+    titulo: "O Alienista",
+    descricao: " Um médico decide estudar a loucura em uma pequena cidade brasileira...",
+    link: "https://www.amazon.com.br/Alienista-Machado-Assis/dp/6550970377/ref=pd_rhf_dp_s_pd_crcbs_d_sccl_1_4/136-1151429-3793618?pd_rd_w=7Htn5&content-id=amzn1.sym.aef4fdbb-350a-48f6-a7d5-3c838de81164&pf_rd_p=aef4fdbb-350a-48f6-a7d5-3c838de81164&pf_rd_r=R438W5PH9FTCJTP0X6T4&pd_rd_wg=tqzfl&pd_rd_r=cfb0cd33-4c68-4014-b3cc-ea76e4e059a2&pd_rd_i=6550970377&psc=1"
+  },
+  hipotesedoamor: {
+    titulo: "A hipótese do amor",
+    descricao: "Um romance de intrigas e segredos...",
+    link: "https://www.amazon.com.br/Hipótese-Amor-Ali-Hazelwood/dp/859504032Xhttps://www.amazon.com.br/hip%C3%B3tese-amor-Sucesso-TikTok/dp/6555653302/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RD5OWBKE3RBO&dib=eyJ2IjoiMSJ9.kFqsdSPJIHjhpD2x--rUdq71_JKfeSpIoebviwnmYeEJ895J5juiHfKycV33_e6o47q_XiUFjKyszHiqHu1AQxb5U_IFoylxMYaF-skKl2x3YaIklIWKYVhiLGqXbGUsluKbToN77bvjPOESzz_kH3CBrXQ4J8xQB2IbJS74pK3o4WOlTfbGKv62xHkNQW435CoUN3uw-8jZtHkZxoEDFGQGtLMglJy7YN-OKgmuIRA.RckDI8qDtTdOWq8DQ88dxLaJIf9vrAi4C2KmB8jt9QA&dib_tag=se&keywords=ali&qid=1774465733&s=books&sprefix=ali%2Cstripbooks%2C371&sr=1-5"
+  },
+  empregada: {
+    titulo: "A Empregada: Bem-vinda à família",
+    descricao: "Um romance de intrigas e segredos...",
+    link: "https://www.amazon.com.br/hip%C3%B3tese-amor-Sucesso-TikTok/dp/6555653302/ref=sr_1_5?crid=2K4C620DPN2M&dib=eyJ2IjoiMSJ9.kFqsdSPJIHjhpD2x--rUdq71_JKfeSpIoebviwnmYeEJ895J5juiHfKycV33_e6o47q_XiUFjKyszHiqHu1AQxb5U_IFoylxMYaF-skKl2x3YaIklIWKYVhiLGqXbGUsluKbToN77bvjPOESzz_kH3CBrXQ4J8xQB2IbJS74pK3o4WOlTfbGKv62xHkNQW435CoUN3uw-8jZtHkZxoEDFGQGtLMglJy7YN-OKgmuIRA.RckDI8qDtTdOWq8DQ88dxLaJIf9vrAi4C2KmB8jt9QA&dib_tag=se&keywords=ali&qid=1774467090&s=books&sprefix=%2Cstripbooks%2C265&sr=1-5"
+  },
+  pequenoprincipe: {
+    titulo: "O Pequeno Príncipe",
+    descricao: "Uma história encantadora sobre amizade e amor...",
+    link: "https://www.amazon.com.br/Pequeno-Pr%C3%ADncipe-Original-Tradu%C3%A7%C3%A3o-aquarelas/dp/8595081514/ref=sr_1_7?crid=3BZBTCU21MRND&dib=eyJ2IjoiMSJ9.W9dS-D684weuxXZH8oB-zBiDvPJaq_7dDtWz32QxbvRib6q6_8UoOLMWEr3Yqi9l48OhtP72FZU0h50Glv-YqCl8S05iZx5f5NcQ8jMKaGcrEyxlYUTtk_ttq5NGCxLoz-BKO8vDqBB7A2sx299M8CDchcXQUw3Qi-cbuyMCho0FzCpn5L3c5IlWi7jAUzdwxRwpYAW3SwMrusWEqbdU5WKPEiR7x16GvIOZMwTeVgk._m6EWo55-lQL_8oxUJxn7QwT2Nt52oB4GPT8L0nMnb8&dib_tag=se&keywords=o+pequeno+pr%C3%ADncipe&qid=1774465955&s=books&sprefix=o+pequeno+pr%C3%ADncipe%2Cstripbooks%2C321&sr=1-7"
+  },
+  nuncaminta: {
+    titulo: "Nunca Minta",
+    descricao: "Recém-casados, eles vão visitar um casarão antigo no meio de...",
+    link: "https://www.amazon.com.br/Nunca-minta-Freida-McFadden/dp/8501923281/ref=pd_bxgy_thbs_d_sccl_2/136-1151429-3793618?pd_rd_w=2l5Jy&content-id=amzn1.sym.ea5263f5-901f-4a74-9b73-3fc0e530788d&pf_rd_p=ea5263f5-901f-4a74-9b73-3fc0e530788d&pf_rd_r=351JTJS2DEK5HY069YR1&pd_rd_wg=zJ3Dp&pd_rd_r=eee752b9-7242-484c-9280-69c2d815d2ad&pd_rd_i=8501923281&psc=1"
+  },
+  hobbit: {
+    titulo: "O Hobbit",
+    descricao: "Bilbo Bolseiro era um dos mais respeitáveis hobbits...",
+    link: "https://www.amazon.com.br/Hobbit-p%C3%B4ster-J-R-R-Tolkien/dp/8595084742/ref=sr_1_1?adgrpid=185388645262&dib=eyJ2IjoiMSJ9.ukkXhruHGRPPxH_mBXThN9k-qUMvvr-2d4rH7OyrrWZxhLYjnvOFgJZYpY_oIUhkC8Glf9oZHm091rr9ovUSLw7hx9Og5N1oALEdW89HyQ4_CjC6GQe2WC0RUDW3WAqQFhx9hhdmCpxfW3hzUYpcrCfDBcOY9dliVgdviVvtKma4unL4PPsG8WDGZ0pn1f5-sWE68ckNPlBX20wM2tY1-_tFxVjnr7J5nJlbM1NDPfY.FYqf9IVOTeD8wqY1LKhwbCLatkUWA3HEcEAz9DklFv4&dib_tag=se&hvadid=782437987801&hvdev=c&hvexpln=0&hvlocphy=9196707&hvnetw=g&hvocijid=15024175082099822802--&hvqmt=e&hvrand=15024175082099822802&hvtargid=kwd-329828403269&hydadcr=18625_13491626&keywords=o+hobbit&mcid=cf41fc2742743519a17cca592fa4554e&qid=1774466102&s=books&sr=1-1"
+  }
+};
+
 function abrirModal(livro) {
   const titulo = document.getElementById("titulo");
   const descricao = document.getElementById("descricao");
   const link = document.getElementById("linkCompra");
 
-  if (livro === "anel") {
-    titulo.innerText = "O Senhor dos Anéis";
-    descricao.innerText = "Uma jornada épica para destruir o Um Anel...";
-    link.href = "https://amazon.com";
-  }
+  const dados = livros[livro];
+  
+  if (!dados) return;
 
-  if (livro === "harry") {
-    titulo.innerText = "Harry Potter";
-    descricao.innerText = "Um jovem descobre que é um bruxo...";
-    link.href = "https://amazon.com";
-  }
 
-  if (livro === "gameofthrones") {
-    titulo.innerText = "Game of Thrones";
-    descricao.innerText = "Uma saga épica de poder e política...";
-    link.href = "https://amazon.com";
-  }
+  titulo.innerText = dados.titulo;
+  descricao.innerText = dados.descricao;
+  link.href = dados.link;
 
-  if (livro === "jantarsecreto") {
-    titulo.innerText = "O Jantar Secreto";
-    descricao.innerText = "Um romance de intrigas e segredos...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "duna") {
-    titulo.innerText = "Duna";
-    descricao.innerText = "Uma história épica de política e poder...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "percyjackson") {
-    titulo.innerText = "Percy Jackson e o Ladrão de Raio";
-    descricao.innerText = "Um jovem descobre que é um bruxo...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "alienista") {
-    titulo.innerText = "O Alienista";
-    descricao.innerText = "Uma história de psicologia e sociedade...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "artedaguerra") {
-    titulo.innerText = "A Arte da Guerra";
-    descricao.innerText = "Um tratado sobre estratégia militar e política...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "empregada") {
-    titulo.innerText = "A Empregada: Bem-vinda à família";
-    descricao.innerText = "Um romance de intrigas e segredos...";
-    link.href = "https://amazon.com";
-  }
-
-   if (livro === "pequenoprincipe") {
-    titulo.innerText = "O Pequeno Príncipe";
-    descricao.innerText = "Uma história encantadora sobre amizade e amor...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "nuncaminta") {
-    titulo.innerText = "Nunca Minta";
-    descricao.innerText = "Um romance de intrigas e segredos...";
-    link.href = "https://amazon.com";
-  }
-
-  if (livro === "hobbit") {
-    titulo.innerText = "O Hobbit";
-    descricao.innerText = "Uma jornada épica para destruir o Um Anel...";
-    link.href = "https://amazon.com";
-  }
-
-  document.getElementById("modal").style.display = "flex";
+    modal.classList.add("ativo");
 }
 
 function fecharModal() {
-  document.getElementById("modal").style.display = "none";
+    modal.classList.remove("ativo");
 }
 </script>        
 
